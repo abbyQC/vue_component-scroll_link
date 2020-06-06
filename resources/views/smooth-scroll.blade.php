@@ -14,18 +14,19 @@
         <scroll-link href="#categories" class="text-blue-500">
             Go To Testimonials
         </scroll-link>
-        <div>
+        <div class="bg-gray-400 w-64 h-64 flex items-center">
             <dropdown class="text-blue-500">
                 <template v-slot:trigger>
-                    <button>...</button>
+                    <button class="items-center">...</button>
                 </template>
-                <li><a href="#">Edit</a></li>
-                <li><a href="#">Delete</a></li>
-                <li><a href="#">Report</a></li>
+                <li><a href="#" class="pl-2 text-xs block hover:bg-gray-200">Edit</a></li>
+                <li><a href="#" class="pl-2 text-xs block hover:bg-gray-200">Delete</a></li>
+                <li><a href="#" class="pl-2 text-xs block hover:bg-gray-200">Report</a></li>
             </dropdown>
         </div>
 
-        <div style="height: 2000px"></div>
+        <div style=" height: 2000px">
+        </div>
         <div id="categories">
             <h2 class="font-bold mb-6">Testimonials</h2>
             <div class="flex">
