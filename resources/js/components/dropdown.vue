@@ -1,6 +1,9 @@
 <template>
   <div class="dropdown">
-    <slot name="trigger"></slot>
+    <div class="dropdown-trigger" @click.prevent="isOpen = ! isOpen">
+      <slot name="trigger"></slot>
+    </div>
+
     <div v-show="isOpen">
       <slot></slot>
     </div>

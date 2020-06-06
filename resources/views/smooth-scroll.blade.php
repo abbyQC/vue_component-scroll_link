@@ -9,19 +9,22 @@
 </head>
 
 <body>
-    <div id="app" class="p-8">
+    <div id="app" class="flex flex-col items-center p-8">
         <h1 class="text-2xl font-bold">Smooth Scroll</h1>
         <scroll-link href="#categories" class="text-blue-500">
             Go To Testimonials
         </scroll-link>
-        <dropdown class="text-blue-500">
-            <template v-slot:trigger>
-                <button>...</button>
-            </template>
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">Delete</a></li>
-            <li><a href="#">Report</a></li>
-        </dropdown>
+        <div>
+            <dropdown class="text-blue-500">
+                <template v-slot:trigger>
+                    <button>...</button>
+                </template>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Delete</a></li>
+                <li><a href="#">Report</a></li>
+            </dropdown>
+        </div>
+
         <div style="height: 2000px"></div>
         <div id="categories">
             <h2 class="font-bold mb-6">Testimonials</h2>
