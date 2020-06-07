@@ -2008,6 +2008,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['name']
 });
@@ -20789,6 +20792,8 @@ var render = function() {
       { staticClass: "modal" },
       [
         _vm._t("default"),
+        _vm._v(" "),
+        _c("footer", [_vm._t("footer")], 2),
         _vm._v(" "),
         _c("a", { staticClass: "close", attrs: { href: "#" } }, [_vm._v("×")])
       ],

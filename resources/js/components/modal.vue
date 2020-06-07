@@ -3,6 +3,9 @@
         <a href="#" class="cancel"></a>
         <div class="modal">
             <slot></slot>
+            <footer>
+                <slot name="footer"></slot>
+            </footer>
             <a href="#" class="close">&times;</a>
         </div>
     </div>
