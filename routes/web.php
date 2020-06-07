@@ -22,4 +22,7 @@ Route::get('scroll', function () {
 Route::get('create', function () {
     return view('conditional-visibility');
 });
+Route::get('modal', function (){
+    return view('modal');
+});
 
