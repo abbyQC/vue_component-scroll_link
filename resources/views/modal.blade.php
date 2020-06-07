@@ -25,7 +25,16 @@
         <p>th is is a paragraph Lorem....</p>
         <template v-slot:footer>
             <a href="#" class="bg-gray-400 py-2 px-4 rounded-lg text-white hover:bg-gray-500 mr-2">Cancel</a>
-            <a href="#" class="bg-blue-400 py-2 px-4 rounded-lg text-white hover:bg-blue-500">Continue</a>
+            <a href="#confirm-cancel-modal" class="bg-blue-400 py-2 px-4 rounded-lg text-white hover:bg-blue-500">Continue</a>
+        </template>
+    </modal>
+
+    <modal name="confirm-cancel-modal">
+        <h1 class="font-bold test-xl mb-2">Are you sure?</h1>
+        <p>th is is a paragraph Lorem....</p>
+        <template v-slot:footer>
+            <a href="#" class="bg-gray-400 py-2 px-4 rounded-lg text-white hover:bg-gray-500 mr-2">Cancel</a>
+            <a href="#" class="bg-blue-400 py-2 px-4 rounded-lg text-white hover:bg-blue-500">Yes</a>
         </template>
     </modal>
 </div>
