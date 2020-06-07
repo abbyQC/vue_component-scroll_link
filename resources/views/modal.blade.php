@@ -13,17 +13,16 @@
         }
     </style>
 </head>
-<body>
-<div class="p-10">
-    <div id="app" class="text-center">
-        <h1 class="text-2xl font-bold mb-8">Modal</h1>
-    </div>
+
+<body class="p-10">
+<div id="app" class="text-center">
+    <h1 class="text-2xl font-bold mb-8">Modal</h1>
     <p>
         <a href="#cancel-modal">Open Modal</a>
     </p>
     <modal name="cancel-modal">
-        <h1>Leaving?</h1>
-        <p>this is a paragraph Lorem....</p>
+        <h1 class="font-bold test-xl mb-2">Leaving?</h1>
+        <p>th is is a paragraph Lorem....</p>
     </modal>
 </div>
 <script src="/js/app.js"></script>

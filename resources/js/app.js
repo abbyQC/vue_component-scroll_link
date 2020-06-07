@@ -3,7 +3,7 @@ import Vue from 'vue';
 import ScrollLink from './components/smooth-scroll.vue';
 import dropdown from './components/dropdown.vue';
 import visible from './components/conditional-visible.vue';
-import modal from './components/modal';
+import modal from './components/modal.vue';
 Window.Vue = require('vue');
 Vue.component('scroll-link', ScrollLink);
 //Vue.component('dropdown', dropdown);

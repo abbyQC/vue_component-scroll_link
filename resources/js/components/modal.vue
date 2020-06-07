@@ -1,12 +1,17 @@
 <template>
-<div>
-    <slot></slot>
-</div>
+    <div :id="name" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modal">
+            <slot></slot>
+            <a href="#" class="close">&times;</a>
+        </div>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "modal"
+        props: ['name']
+
     }
 </script>
 
@@ -25,10 +30,12 @@
         transition: opacity .3s;
         opacity: 0;
     }
+
     .overlay:target {
         visibility: visible;
         opacity: 1;
     }
+
     .modal {
         position: relative;
         width: 500px;
@@ -38,6 +45,7 @@
         padding: 2.5em;
         box-shadow: 0 5px 11px rgba(36, 37, 38, 0.08);
     }
+
     .modal .close {
         position: absolute;
         top: 15px;
@@ -45,6 +53,7 @@
         color: grey;
         text-decoration: none;
     }
+
     .overlay .cancel {
         position: absolute;
         width: 100%;
