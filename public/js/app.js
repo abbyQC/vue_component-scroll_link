@@ -20793,7 +20793,12 @@ var render = function() {
       [
         _vm._t("default"),
         _vm._v(" "),
-        _c("footer", [_vm._t("footer")], 2),
+        _c(
+          "footer",
+          { staticClass: "flex mt-8 center" },
+          [_vm._t("footer")],
+          2
+        ),
         _vm._v(" "),
         _c("a", { staticClass: "close", attrs: { href: "#" } }, [_vm._v("×")])
       ],

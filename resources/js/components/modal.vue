@@ -3,7 +3,7 @@
         <a href="#" class="cancel"></a>
         <div class="modal">
             <slot></slot>
-            <footer>
+            <footer class="flex mt-8 center">
                 <slot name="footer"></slot>
             </footer>
             <a href="#" class="close">&times;</a>
