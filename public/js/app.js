@@ -33422,6 +33422,14 @@ var Plugin = {
   install: function install(Vue) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     Vue.component('modal', _Component__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    Vue.prototype.$modal = {
+      show: function show(name) {
+        location.hash = name;
+      },
+      hide: function hide(name) {
+        location.hash = "#";
+      }
+    };
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Plugin);
