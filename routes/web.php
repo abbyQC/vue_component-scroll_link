@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome');// connect to blade
 });
 Route::get('scroll', function () {
     return view('smooth-scroll');
 });
+Route::get('create', function () {
+    return view('conditional-visibility');
+});
+
