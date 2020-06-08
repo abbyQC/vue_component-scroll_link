@@ -1,5 +1,5 @@
 <template>
-    <div :id="name" class="overlay">
+    <div :id="name" class="overlay text-left">
         <a href="#" class="cancel"></a>
         <div class="modal">
             <slot></slot>
@@ -18,7 +18,7 @@
     }
 </script>
 
-<style type="text/css">
+<style>
     .overlay {
         visibility: hidden;
         position: absolute;

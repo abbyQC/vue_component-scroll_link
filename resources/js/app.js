@@ -6,6 +6,7 @@ import dropdown from './components/dropdown.vue';
 import visible from './components/conditional-visible.vue';
 import confirmDialog from './components/confirm-dialog.vue';
 import confirmButton from './components/confirmButton.vue';
+
 Window.Vue = require('vue');
 Vue.use(Modal);
 Vue.component('scroll-link', ScrollLink);
@@ -18,9 +19,19 @@ new Vue({
     el: "#app",
     methods: {
         confirm(message) {
-            this.$modal.dialog(message).then(confirmed => {
-                confirmed ? alert('Proceed') : alert('Cancel');
-            });
+            this.$modal.dialog(message)
+                .then(confirmed => {
+                    if (confirmed) {
+                        // Proceed. Submit ajax request, etc.
+                        alert('Proceed');
+                    } else {
+                        // Optionally override the button visibility and labels.
+                        this.$modal.dialog('Okay, canceled', {
+                            cancelButton: 'Close',
+                            confirmButton: false
+                        });
+                    }
+                });
         }
     }
 

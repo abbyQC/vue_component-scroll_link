@@ -11,13 +11,30 @@
 <body class="font-sans p-10">
 <div id="app" class="text-center">
     <h1 class="text-2xl font-bold mb-8">Confirmation Dialog</h1>
-    <div>
+    <div class="mb-6">
         <form method="POST">
             <confirm-button
                 meaasge="Are you sure you want to cancel you account"
                 class="bg-blue-500 hover:bg-blue-600 py-2 px-4 text-white rounded-lg"
-            >Submit
+            >Option 1
             </confirm-button>
+        </form>
+    </div>
+    <div class="mb-6">
+        <form method="POST">
+            <confirm-button
+                meaasge="Are you sure you want to cancel you account"
+                class="bg-blue-500 hover:bg-blue-600 py-2 px-4 text-white rounded-lg"
+            >Option 2
+            </confirm-button>
+        </form>
+    </div>
+    <div class="mb-6">
+        <form method="POST" @submit.prevent="confirm('Are you really sure?')">
+            <button
+                meaasge="Are you sure you want to cancel you account"
+            >Option 3
+            </button>
         </form>
     </div>
     <confirm-dialog></confirm-dialog>

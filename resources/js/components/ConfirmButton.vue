@@ -6,27 +6,32 @@
 
 <script>
     export default {
-        props: ['message'],
+        props: {
+            message: {},
+            confirmButton: {default: 'Continue'},
+            cancelButton: {default: 'Cancel'}
+        },
         data() {
             return {confirmed: false};
         },
         methods: {
             confirm(e) {
-                if(this.confirmed){
+                if (this.confirmed) {
                     return;
                 }
                 e.preventDefault();
-                this.$modal.dialog(this.message).then(confirmed => {
-                    if (confirmed) {
-                        this.confirmed = true;
+                this.$modal.dialog(this._props).then(confirmed => {
+                        this.confirmed = confirmed;
+                        if(confirmed){
                         this.$el.click();
+                    } else {
+                        this.$modal.dialog('We are sorry to see you go');
                     }
                 });
             }
         }
     }
+
+
+
 </script>
-
-<style scoped>
-
-</style>
