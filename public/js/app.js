@@ -2004,7 +2004,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "ConfirmButton"
+  props: ['message'],
+  data: function data() {
+    return {
+      confirmed: false
+    };
+  },
+  methods: {
+    confirm: function confirm(e) {
+      var _this = this;
+
+      if (this.confirmed) {
+        return;
+      }
+
+      e.preventDefault();
+      this.$modal.dialog(this.message).then(function (confirmed) {
+        if (confirmed) {
+          _this.confirmed = true;
+
+          _this.$el.click();
+        }
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -20858,7 +20881,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("button", [_vm._t("default")], 2)
+  return _c("button", { on: { click: _vm.confirm } }, [_vm._t("default")], 2)
 }
 var staticRenderFns = []
 render._withStripped = true
