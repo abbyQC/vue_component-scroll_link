@@ -11,6 +11,11 @@
 <body class="font-sans p-10">
 <div id="app" class="text-center">
     <h1 class="text-2xl font-bold mb-8">Confirmation Dialog</h1>
+    <div>
+        <form method="POST">
+            <confirm-button>Submit</confirm-button>
+        </form>
+    </div>
     <confirm-dialog></confirm-dialog>
 </div>
 <script src="/js/app.js"></script>

@@ -28,4 +28,7 @@ Route::get('modal', function () {
 Route::get('confirm', function () {
     return view('confirmation-button');
 });
+Route::post('confirmation-button', function () {
+    return 'Form Submitted';
+});
 
