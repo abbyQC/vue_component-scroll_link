@@ -21,6 +21,9 @@
             <tab title="Third">
                 <p>Get out!</p>
             </tab>
+            <tab title="Wew" active>
+                <p>It works!</p>
+            </tab>
         </tabs>
     </div>
     <script src="/js/app.js"></script>

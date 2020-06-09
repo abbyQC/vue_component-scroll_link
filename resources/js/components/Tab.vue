@@ -6,10 +6,13 @@
 
 <script>
     export default {
-        props: ['title'],
+        props: {
+            title: {},
+            active: {type: Boolean, default: false}
+        },
         data() {
             return {
-                show: false
+                isActive: this.active
             };
         }
     };

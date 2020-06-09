@@ -1915,10 +1915,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['title'],
+  props: {
+    title: {},
+    active: {
+      type: Boolean,
+      "default": false
+    }
+  },
   data: function data() {
     return {
-      show: false
+      isActive: this.active
     };
   }
 });
@@ -1949,6 +1955,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1958,6 +1970,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.tabs = this.$children;
+    this.activeTab = this.tabs[0];
+  },
+  watch: {
+    activeTab: function activeTab(_activeTab) {
+      this.tabs.map(function (tab) {
+        return tab.show = tab == _activeTab;
+      });
+    }
   }
 });
 
@@ -20895,18 +20915,29 @@ var render = function() {
     [
       _c(
         "ul",
+        { staticClass: "flex mb-4 border-b border-blue-400" },
         _vm._l(_vm.tabs, function(tab, index) {
-          return _c("li", [
-            _c("button", {
-              attrs: { role: "tab" },
-              domProps: { textContent: _vm._s(tab.title) },
-              on: {
-                click: function($event) {
-                  _vm.activeTab = tab
+          return _c(
+            "li",
+            {
+              staticClass: "px-3 py-2 bg-white",
+              class: { "border border-b-0 rounded-t-lg": tab == _vm.activeTab },
+              style: tab == _vm.activeTab ? "margin-bottom: -1px" : ""
+            },
+            [
+              _c("button", {
+                staticClass: "focus:outline-none",
+                class: { "font-bold": tab == _vm.activeTab },
+                attrs: { role: "tab" },
+                domProps: { textContent: _vm._s(tab.title) },
+                on: {
+                  click: function($event) {
+                    _vm.activeTab = tab
+                  }
                 }
-              }
-            })
-          ])
+              })
+            ]
+          )
         }),
         0
       ),
@@ -33759,14 +33790,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./resources/js/components/confirmButton.vue ***!
   \***************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _confirmButton_vue_vue_type_template_id_5a332652___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./confirmButton.vue?vue&type=template&id=5a332652& */ "./resources/js/components/confirmButton.vue?vue&type=template&id=5a332652&");
 /* harmony import */ var _confirmButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./confirmButton.vue?vue&type=script&lang=js& */ "./resources/js/components/confirmButton.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _confirmButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _confirmButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -33796,7 +33828,7 @@ component.options.__file = "resources/js/components/confirmButton.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/confirmButton.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
