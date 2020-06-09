@@ -20934,7 +20934,7 @@ var render = function() {
             {
               staticClass: "px-3 py-2 bg-white",
               class: { "border border-b-0 rounded-t-lg": _vm.isActiveTab(tab) },
-              style: tab == _vm.activeTab ? "margin-bottom: -1px" : ""
+              style: _vm.isActiveTab(tab) ? "margin-bottom: -1px" : ""
             },
             [
               _c("button", {

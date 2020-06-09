@@ -4,7 +4,7 @@
             <li v-for="(tab,index) in tabs"
                 class="px-3 py-2 bg-white"
                 :class="{'border border-b-0 rounded-t-lg' :isActiveTab(tab)}"
-                :style="tab == activeTab ? 'margin-bottom: -1px' :''">
+                :style="isActiveTab(tab) ? 'margin-bottom: -1px' :''">
                 <button
                     v-text=" tab.title
             "
