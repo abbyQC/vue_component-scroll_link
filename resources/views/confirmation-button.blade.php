@@ -23,16 +23,19 @@
     <div class="mb-6">
         <form method="POST">
             <confirm-button
-                meaasge="Are you sure you want to cancel you account"
+                message="Are you sure you want to cancel your account?"
+                cancel-button="Go Back"
+                confirm-button="Continue On"
                 class="bg-blue-500 hover:bg-blue-600 py-2 px-4 text-white rounded-lg"
-            >Option 2
+            >
+                Option 2
             </confirm-button>
         </form>
     </div>
     <div class="mb-6">
         <form method="POST" @submit.prevent="confirm('Are you really sure?')">
             <button
-                meaasge="Are you sure you want to cancel you account"
+                class="bg-blue-500 hover:bg-blue-600 py-2 px-4 text-white rounded-lg"
             >Option 3
             </button>
         </form>

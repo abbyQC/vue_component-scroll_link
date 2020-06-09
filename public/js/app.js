@@ -33246,10 +33246,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-Window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+Window.Vue = vue__WEBPACK_IMPORTED_MODULE_0___default.a;
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_plugins_modal_ModalPlugin__WEBPACK_IMPORTED_MODULE_1__["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('scroll-link', _components_smooth_scroll_vue__WEBPACK_IMPORTED_MODULE_2__["default"]); //Vue.component('dropdown', dropdown);
-
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('scroll-link', _components_smooth_scroll_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('dropdown', _components_dropdown_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('visible', _components_conditional_visible_vue__WEBPACK_IMPORTED_MODULE_4__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('confirm-dialog', _components_confirm_dialog_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('confirmButton', _components_confirmButton_vue__WEBPACK_IMPORTED_MODULE_6__["default"]);
