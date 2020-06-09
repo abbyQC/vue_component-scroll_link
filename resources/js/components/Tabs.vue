@@ -5,14 +5,14 @@
                 class="px-3 py-2 bg-white"
                 :class="{'border border-b-0 rounded-t-lg' :tab== activeTab}"
                 :style="tab == activeTab ? 'margin-bottom: -1px' :''">
-             <button
+                <button
                     v-text=" tab.title
             "
-            :class="{'font-bold': tab == activeTab}"
-            class="focus:outline-none"
-            role="tab"
-            @click="activeTab = tab"
-            ></button>
+                    :class="{'font-bold': tab == activeTab}"
+                    class="focus:outline-none"
+                    role="tab"
+                    @click="activeTab = tab"
+                ></button>
             </li>
         </ul>
         <slot></slot>
@@ -29,17 +29,20 @@
         },
         mounted() {
             this.tabs = this.$children;
-            this.activeTab = this.tabs[0];
+            this.setInitialActiveTab();
         },
         watch: {
             activeTab(activeTab) {
                 this.tabs.map(tab => (tab.show = tab == activeTab));
             }
+        },
+        methods: {
+            setInitialActiveTab() {
+                this.activeTab = this.tabs.find(tab => tab.active) || this.tabs[0];
+            }
         }
     };
 </script>
 
-<style scoped>
 
-</style>
 

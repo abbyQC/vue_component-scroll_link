@@ -8,11 +8,14 @@
     export default {
         props: {
             title: {},
-            active: {type: Boolean, default: false}
+            active: {
+                type: Boolean,
+                default: false
+            }
         },
         data() {
             return {
-                isActive: this.active
+                show: false
             };
         }
     };
