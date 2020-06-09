@@ -7,7 +7,7 @@ import visible from './components/conditional-visible.vue';
 import confirmDialog from './components/confirm-dialog.vue';
 import confirmButton from './components/confirmButton.vue';
 import tabs from './components/Tabs.vue';
-
+import tab from './components/Tab.vue';
 Window.Vue = Vue;
 Vue.use(Modal);
 Vue.component('scroll-link', ScrollLink);
@@ -16,6 +16,7 @@ Vue.component('visible', visible);
 Vue.component('confirm-dialog', confirmDialog);
 Vue.component('confirmButton', confirmButton);
 Vue.component('tabs', tabs);
+Vue.component('tab', tab);
 
 new Vue({
     el: "#app",

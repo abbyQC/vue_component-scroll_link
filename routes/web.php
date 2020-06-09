@@ -43,4 +43,7 @@ Route::get('confirm', function () {
 Route::post('confirmation-button', function () {
     return 'Form Submitted';
 });
+Route::get('tabs', function(){
+    return view('tabs');
+});
 
