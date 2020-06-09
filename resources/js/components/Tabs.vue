@@ -3,12 +3,12 @@
         <ul class="flex mb-4 border-b border-blue-400">
             <li v-for="(tab,index) in tabs"
                 class="px-3 py-2 bg-white"
-                :class="{'border border-b-0 rounded-t-lg' :tab== activeTab}"
+                :class="{'border border-b-0 rounded-t-lg' :isActiveTab(tab)}"
                 :style="tab == activeTab ? 'margin-bottom: -1px' :''">
                 <button
                     v-text=" tab.title
             "
-                    :class="{'font-bold': tab == activeTab}"
+                    :class="{'font-bold':isActiveTab(tab)}"
                     class="focus:outline-none"
                     role="tab"
                     @click="activeTab = tab"
@@ -33,10 +33,13 @@
         },
         watch: {
             activeTab(activeTab) {
-                this.tabs.map(tab => (tab.show = tab == activeTab));
+                this.tabs.map(tab => (tab.show = this.isActiveTab(tab)));
             }
         },
         methods: {
+            isActiveTab(tab) {
+                return tab == this.activeTab;
+            },
             setInitialActiveTab() {
                 this.activeTab = this.tabs.find(tab => tab.active) || this.tabs[0];
             }

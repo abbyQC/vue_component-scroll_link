@@ -1974,12 +1974,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   watch: {
     activeTab: function activeTab(_activeTab) {
+      var _this = this;
+
       this.tabs.map(function (tab) {
-        return tab.show = tab == _activeTab;
+        return tab.show = _this.isActiveTab(tab);
       });
     }
   },
   methods: {
+    isActiveTab: function isActiveTab(tab) {
+      return tab == this.activeTab;
+    },
     setInitialActiveTab: function setInitialActiveTab() {
       this.activeTab = this.tabs.find(function (tab) {
         return tab.active;
@@ -20928,13 +20933,13 @@ var render = function() {
             "li",
             {
               staticClass: "px-3 py-2 bg-white",
-              class: { "border border-b-0 rounded-t-lg": tab == _vm.activeTab },
+              class: { "border border-b-0 rounded-t-lg": _vm.isActiveTab(tab) },
               style: tab == _vm.activeTab ? "margin-bottom: -1px" : ""
             },
             [
               _c("button", {
                 staticClass: "focus:outline-none",
-                class: { "font-bold": tab == _vm.activeTab },
+                class: { "font-bold": _vm.isActiveTab(tab) },
                 attrs: { role: "tab" },
                 domProps: { textContent: _vm._s(tab.title) },
                 on: {
