@@ -12,6 +12,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$examples = [
+    'smooth-scroll',
+    'context-menu',
+    'conditional-visibility',
+    'modal',
+    'confirmation-button'
+];
+collect($examples)->each(function ($uri) {
+    Route::get($uri, function () use ($uri) {
+        return view($uri);
+    });
+});
 
 Route::get('/', function () {
     return view('welcome');// connect to blade
