@@ -6,6 +6,7 @@ import dropdown from './components/dropdown.vue';
 import visible from './components/conditional-visible.vue';
 import confirmDialog from './components/confirm-dialog.vue';
 import confirmButton from './components/confirmButton.vue';
+import tabs from './components/Tabs.vue';
 
 Window.Vue = Vue;
 Vue.use(Modal);
@@ -14,6 +15,7 @@ Vue.component('dropdown', dropdown);
 Vue.component('visible', visible);
 Vue.component('confirm-dialog', confirmDialog);
 Vue.component('confirmButton', confirmButton);
+Vue.component('tabs', tabs);
 
 new Vue({
     el: "#app",
