@@ -33,6 +33,7 @@
         <h1 class="font-bold test-xl mb-2">Are you sure?</h1>
         <p>th is is a paragraph Lorem....</p>
         <template v-slot:footer>
+{{--            <a href="#"></a>--}}
             <button @click="$modal.hide('cancel-modal')" class="bg-gray-400 py-2 px-4 rounded-lg text-white hover:bg-gray-500 mr-2">Cancel</button>
             <button @click="$modal.hide('cancel-modal')" class="bg-blue-400 py-2 px-4 rounded-lg text-white hover:bg-blue-500">Yes</button>
         </template>
